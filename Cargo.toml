@@ -2,6 +2,10 @@
 name = "cri-kit"
 version = "0.1.0"
 edition = "2021"
+description = "cri kit for rust CRI container runtime interface devs"
+authors = ["CGQAQ <m.jason.liu@outlook.com"]
+license = "MPL 2.0"
+license-file = "./LICENSE"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
