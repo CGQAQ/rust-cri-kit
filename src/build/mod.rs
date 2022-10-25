@@ -44,7 +44,7 @@ pub fn cri_init(project_name: &str) -> Result<(), Box<dyn std::error::Error>> {
     let fname = "/runtime.v1alpha2.rs";
 
     let gen_rs_path = format!("{}{}", env::var("OUT_DIR").unwrap(), fname);
-    let content = transformer::transform(gen_rs_path)?;
+    let content = transformer::transform(gen_rs_path, project_name.to_string())?;
 
     let stub = format!(
         "\
