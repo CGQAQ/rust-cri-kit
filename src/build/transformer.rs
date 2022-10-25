@@ -45,7 +45,7 @@ impl VisitMut for TraitItemDefauter {
                 i.sig.output = parse_quote! {
                     -> Result<
                             tonic::Response<
-                                <crate::runtime_service::FooRuntimeService as RuntimeService>::GetContainerEventsStream,
+                                <#struct_ as #trait_>::GetContainerEventsStream,
                             >,
                             tonic::Status,
                         >

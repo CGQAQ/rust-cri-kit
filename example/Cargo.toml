@@ -11,4 +11,4 @@ tokio = {version = "1.21.2", features = ["full"]}
 tonic = "0.8.2"
 
 [build-dependencies]
-cri-kit = { version = "0.1.0", path = ".." }
+cri-kit = { version = "0.3.0", path = ".." }
