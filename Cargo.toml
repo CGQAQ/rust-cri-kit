@@ -1,6 +1,6 @@
 [package]
 name = "cri-kit"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "cri kit for rust CRI container runtime interface devs"
 authors = ["CGQAQ <m.jason.liu@outlook.com"]

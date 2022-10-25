@@ -97,9 +97,13 @@ pub fn transform(
     let file_content = std::fs::read_to_string(file_path)?;
 
     let mut file_parsed = parse_file(&file_content)?;
-    TraitTransformer(project_name).visit_file_mut(&mut file_parsed);
+    TraitTransformer(project_name.clone()).visit_file_mut(&mut file_parsed);
 
     Ok(prettyplease::unparse(&file_parsed)
         // hack
-        .replace("T::GetContainerEventsStream", "<crate::runtime_service::FooRuntimeService as RuntimeService>::GetContainerEventsStream"))
+        .replace(
+            "T::GetContainerEventsStream",
+            format!("<crate::runtime_service::{}RuntimeService as RuntimeService>::GetContainerEventsStream", change_case::pascal_case(&project_name)).as_str(),
+        )
+    )
 }
