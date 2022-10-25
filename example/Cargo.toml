@@ -7,9 +7,8 @@ edition = "2021"
 
 [dependencies]
 prost = "0.11.0"
-rust-cri-kit = { version = "0.1.0", path = ".." }
 tokio = {version = "1.21.2", features = ["full"]}
 tonic = "0.8.2"
 
 [build-dependencies]
-rust-cri-kit = { version = "0.1.0", path = ".." }
+cri-kit = { version = "0.1.0", path = ".." }

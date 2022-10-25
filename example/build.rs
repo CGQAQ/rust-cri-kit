@@ -1,4 +1,4 @@
-use rust_cri_kit::build::cri_init;
+use cri_kit::build::cri_init;
 use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>> {
